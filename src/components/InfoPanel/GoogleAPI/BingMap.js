@@ -1,29 +1,32 @@
-import React from "react";
-import BingMapsReact from "bingmaps-react";
+import React from 'react';
+import ReactMap from 'react-mapbox-gl';
 
-function BingMap(props) {
+const accessToken = "pk.eyJ1Ijoia3NoaXRpenByYXRhcCIsImEiOiJja3hieDgyYzQxMjlhMnZrdG1tNzkwNjE0In0.vIYAYPMRzYVHgKYOskl6FQ";
+const style = "mapbox://styles/mapbox/streets-v9";
 
-    let latitude = null, longitude = null;
+const Map = ReactMap({
+  accessToken
+});
 
-    if(props.user.address !== undefined){
-        latitude = props.user.address.geo.lat;
-        longitude = props.user.address.geo.lat;
-    }
+const mapStyle = {
+  height: '100%',
+  width: '36vw',
 
-    console.log("[Longitude]", longitude)
-    console.log("[Latitude]", latitude)
+};
 
-  return (
-    <BingMapsReact
-      bingMapsKey="Ak1uPdpiAyizxPVeNZxS9LU9pYsOqiasfE_hLLUWeJv6HjoMfgOlURMfFYjGQ3yw"
-      height = "500px"
-      width = "500px"
-      viewOptions={{
-        center: { latitude: 42.360081, longitude: -71.058884 },
-        mapTypeId: "grayscale",
-      }}
-      />
-  );
-}
+function MapAPI(){
 
-export default BingMap;
+  const viewport = {
+    center : [0, 20],
+    zoom : [4]
+  }
+
+    return (
+      <Map
+        style={style}
+        containerStyle={mapStyle}
+        {...viewport}/>
+    );
+  }
+
+export default MapAPI;

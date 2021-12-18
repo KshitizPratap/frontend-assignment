@@ -1,7 +1,6 @@
 .ListContainer{
     width: 28vw;
     background-color: rgb(173, 222, 245);
-    /* position: absolute; */
     z-index: 5;
 }
 .List{

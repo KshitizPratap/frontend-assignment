@@ -4,7 +4,7 @@ import axios from "axios";
 import classes from './InfoPanel.module.css'
 import UserDetail from "./UserDetail/UserDetail";
 import Form from "./Form/Form";
-import BingMap from "./GoogleAPI/BingMap";
+import MapAPI from "./GoogleAPI/BingMap";
 
 function InfoPanel(props){
 
@@ -67,6 +67,8 @@ function InfoPanel(props){
                         
                     </div>
                 </div>
+
+                <MapAPI />
 
             </div>
             
