@@ -26,7 +26,7 @@ function LandingPage() {
 
     return(
         <div className={classes.MainContainer}>
-            <nav>HEADING</nav>
+            <nav>FrontEnd Assignment</nav>
 
             <div className={classes.Container}>
                 <UserList 

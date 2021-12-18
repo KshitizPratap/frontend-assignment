@@ -10,7 +10,7 @@ const Form = ({label, validation}) => {
         inputField = (
             <div className={classes.Title}>
                 <label htmlFor={`${label}`}>Title</label><br/>
-                <input onChange={validation} type = "text" name={`${label}`} maxLength="25"/>
+                <input onChange={validation} required type = "text" name={`${label}`} maxLength="25"/>
             </div> 
         )
     }
@@ -19,7 +19,7 @@ const Form = ({label, validation}) => {
         inputField = (
             <div className={classes.Body}>
                 <label htmlFor={`${label}`}>Body</label><br/>
-                <textarea onChange={validation} type = "text" name={`${label}`} maxLength="250"/>
+                <textarea onChange={validation} required type = "text" name={`${label}`} maxLength="250"/>
             </div>
         ) 
     }
