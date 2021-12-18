@@ -1,0 +1,20 @@
+.Title, .Body{
+    margin-top: 1rem;
+    font-weight: 500;
+}
+.Title input{
+    width: 60%;
+    height: 2rem;
+    border-radius: 5px;
+    margin: 0.5rem 0;
+    cursor:text;
+}
+
+.Body textarea{
+    width: 60%;
+    height: 10rem;
+    border-radius: 5px;
+    margin: 1rem;
+    cursor:text;
+
+}
